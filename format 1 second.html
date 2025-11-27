@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التسجيل المتقدم</title>
+    <style>
+        /* شوية تنسيقات بسيطة عشان الشكل يكون أحسن */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block; /* عشان الـ Label يبقى في سطر لوحده */
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+        button[type="reset"]:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>نموذج إدخال البيانات</h1>
+        
+        <form action="test.py" method="POST">
+            
+            <!-- حقل مخفي -->
+            <input type="hidden" name="secret_id" value="987654321">
+            
+            <!-- 1. Username -->
+            <label for="username">اسم المستخدم (Username):</label><br>
+            <input 
+                type="text" 
+                id="username" 
+                name="username" 
+                placeholder="أدخل اسم مستخدم لا يقل عن 5 حروف"
+                required
+            ><hr>
+            
+            <!-- 2. Password -->
+            <label for="password">كلمة المرور (Password):</label><br>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="يجب أن تحتوي كلمة المرور على حروف وأرقام ورموز"
+            ><hr>
+            
+            <!-- 3. Mobile -->
+            <label for="mobile">رقم الهاتف (Mobile):</label><br>
+            <input 
+                type="tel" 
+                id="mobile" 
+                name="mobile" 
+                placeholder="التنسيق المطلوب: +20100 (234) 123"
+                pattern="^\+\d{2}\d{3}\s\(\d{3}\)\s\d{3}$"
+                title="يجب أن يكون التنسيق: +20100 (234) 123"
+            ><hr>
+            
+            <!-- 4. Email -->
+            <label for="email">البريد الإلكتروني (Email):</label><br>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="أدخل بريد إلكتروني صحيح (إجباري)"
+                required
+            ><hr>
+            
+            <!-- 5. Subject -->
+            <label for="subject">الموضوع (Subject):</label><br>
+            <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                placeholder="اكتب ملخصاً مختصراً لموضوعك"
+            ><hr>
+            
+            <!-- الأزرار -->
+            <div class="buttons">
+                <button type="reset">Empty Form</button>
+                <button type="submit">Send Data</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

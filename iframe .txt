@@ -1,0 +1,24 @@
+ iFrame, ARIA 
+1.
+1..
+<button type="submit">...</button> or <input type="submit" value="...">
+2.
+<title>...</title>
+3.
+<h1> to <h6>
+4.
+<p>...</p>
+5.
+<html lang="ar" dir="rtl">
+6.
+10 To 20
+7.
+Add: tabindex="0"
+8.
+Accessible Rich Internet Applications
+2.
+We need to use ARIA attributes to tell the screen reader that this <div> is not just text — it’s something the user can interact with.
+•	We use role="checkbox" to tell the screen reader that each skill acts like a checkbox.
+•	We use aria-checked="false" to indicate that the item is currently not selected.
+•	We use tabindex="0" to make the element focusable using the Tab key.
+•	We use aria-labelledby to connect each skill with its corresponding label so the screen reader reads the correct name.

@@ -1,0 +1,110 @@
+!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج البيانات</title>
+</head>
+<body>
+
+<h1>نموذج إدخال البيانات</h1>
+
+<form method="GET" action="">
+    
+    <!-- حقل Token المخفي -->
+    <input type="hidden" name="token" value="b92f1fc2fce391ad7af633723afd3055">
+    
+    <!-- حقل Email غير قابل للتعديل -->
+    <div>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" value="o@o.com" readonly>
+    </div>
+    
+    <br>
+    
+    <!-- حقل Username -->
+    <div>
+        <label for="username">اسم المستخدم:</label>
+        <input type="text" id="username" name="username" minlength="5" maxlength="20" required autofocus>
+    </div>
+    
+    <br>
+    
+    <!-- قائمة المهارات -->
+    <div>
+        <fieldset>
+            <legend>المهارات البرمجية:</legend>
+            
+            <div>
+                <input type="checkbox" id="skill1" name="skills" value="Problem Solving" checked>
+                <label for="skill1">Problem Solving</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="skill2" name="skills" value="Logical Thinking">
+                <label for="skill2">Logical Thinking</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="skill3" name="skills" value="Advanced Search">
+                <label for="skill3">Advanced Search</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="skill4" name="skills" value="Analysis">
+                <label for="skill4">Analysis</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="skill5" name="skills" value="Planning">
+                <label for="skill5">Planning</label>
+            </div>
+        </fieldset>
+    </div>
+    
+    <br>
+    
+    <!-- قائمة الوظائف -->
+    <div>
+        <fieldset>
+            <legend>الوظيفة:</legend>
+            
+            <div>
+                <input type="radio" id="job1" name="job" value="Front-End Developer" checked>
+                <label for="job1">Front-End Developer</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="job2" name="job" value="Back-End Developer">
+                <label for="job2">Back-End Developer</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="job3" name="job" value="Business Analyst">
+                <label for="job3">Business Analyst</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="job4" name="job" value="Project Manager">
+                <label for="job4">Project Manager</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="job5" name="job" value="Scrum Master">
+                <label for="job5">Scrum Master</label>
+            </div>
+        </fieldset>
+    </div>
+    
+    <br>
+    
+    <!-- الأزرار -->
+    <div>
+        <button type="submit" name="action" value="send">Send</button>
+        <button type="reset" name="action" value="empty">Empty</button>
+    </div>
+    
+</form>
+
+</body>
+</html>

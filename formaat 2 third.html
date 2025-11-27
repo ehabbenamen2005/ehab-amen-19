@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج البرمجة</title>
+</head>
+<body>
+    <h1>نموذج تعلم البرمجة</h1>
+
+    <form>
+        <div>
+            <label for="name">اسم المستخدم:</label>
+            <input type="text" id="name" name="name" placeholder="أدخل اسمك">
+        </div>
+
+        <div>
+            <label for="book">Choose Book:</label>
+            <select id="book" name="book">
+                <option value="">اختر إصدار</option>
+                <optgroup label="PHP">
+                    <option value="php-v5.0">v5.0</option>
+                    <option value="php-v7.0">v7.0</option>
+                    <option value="php-v8.0">v8.0</option>
+                </optgroup>
+                <optgroup label="Python">
+                    <option value="python-v2.0">v2.0</option>
+                    <option value="python-v3.0">v3.0</option>
+                    <option value="python-v3.9">v3.9</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="brief">Write Here Why You Want To Learn Programming:</label>
+            <textarea id="brief" name="brief"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">إرسال</button>
+            <button type="reset">مسح</button>
+        </div>
+    </form>
+</body>
+</html>
